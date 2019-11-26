@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello OccasController!{% endblock %}
+{% block body %}
+{% set url = path("occas_create") %}
+<h1 class="textoccas">USED-CARS</h1>
+<a href="{{ url }}" id="createad">Créer une annonce</a>
+<div class="slideoccas">
+
+{% for occasion in occasions %}
+        {% set url = path('occas_show', {'slug': occasion.slug }) %}
+<a href="{{ url }}"><div class="cardbox">
+<div class="modele">{{occasion.marque}} - {{occasion.modele}}</div>
+<div class="couv"><img src="{{occasion.imgCouv}}" alt="image"></div>
+<div class="km">{{occasion.km}} km</div>
+<div class="prix">{{occasion.prix}} €</div>
+
+
+</div></a>
+{% endfor %}
+
+</div>
+{% endblock %}

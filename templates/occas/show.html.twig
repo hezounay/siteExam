@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voiture{% endblock %}
+
+{% block body %}
+<div class="slideshow">
+
+
+    {% set url = path("occas_edit", {'slug': occasions.slug }) %}
+ 
+    <a href="{{ url }}"><h1 class="textshow1">Editer</h1></a>  
+       {% set url = path("occas_view") %}
+         <a href="{{ url }}"> <h1 class="textshow2">Retour</h1></a>
+
+    <div class="container opacity">
+ <div class="annonce-title"
+            style=" background-image:url({{ occasions.imgCouv }}); width:100%; height:300px;  background-repeat:no-repeat; background-size:cover; background-position: center center;">
+            <span class="spanshow" >
+                <h1 style="background-color:rgba(0,0,0,0.2);">{{ occasions.marque }} - {{occasions.modele}}</h1>
+                <p style="background-color:rgba(0,0,0,0.2);">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus dolore molestias commodi
+                    tempora eligendi nostrum incidunt labore, vel, consequatur consequuntur consectetur ut expedita eius
+                    sequi illum, fugiat nisi quasi harum dolores sunt. Ipsum, labore ullam cumque eaque amet
+                    perspiciatis quasi.</p>
+                <p class="h2" style="background-color:rgba(0,0,0,0.2);"><strong>{{ occasions.km }} km</strong> pour un prix de
+                    <strong>{{ occasions.prix }}</strong>€</p>
+            </span>
+        </div>
+    </div>
+                <a href="#" class="btn" style="background-color:rgba(0,0,0,0.2); margin-left:150px;">Prendre rendez-vous</a>
+
+    <div class="container" style="margin-top:75px;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                    <h6>Nombre de propriétaires : {{ occasions.NombreProprio }}</h6>
+                    <h6>Cylindrée : {{ occasions.cylindree }}cm³</h6>
+                    <h6>Puissance : {{ occasions.puissance }}ch</h6>
+                    <h6>Carburant : {{ occasions.carburant }}</h6>
+                    <h6>Année de mise en circulation : {{ occasions.anneeCircu }}</h6>
+                    <h6>Transmission : {{ occasions.transmission }}</h6>
+                    <h6>Options : </h6>
+                    <p>{{ occasions.options }}</p>
+                    <h6>Description :</h6>{{ occasions.description | raw}}
+                </div>
+                {#
+                <div class="bd-example">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            {% for gallery in occasions.gallery %}
+                            <li data-target="#carouselExampleCaptions" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
+                            {% endfor %}
+                        </ol>
+                        <div class="carousel-inner">
+
+                            {% for gallery in occasions.gallery %}
+                            
+                            <div class="carousel-item {% if loop.first %}active{% endif %}">
+                                <img src="http://placehold.it/500x500" class="d-block w-100"  alt="image de {{ occasions.modele }}">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>{{  occasions.modele  }}</h5>
+                                    <p>{{ gallery.caption }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                        </div>
+                            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                    </div>
+                </div>
+                #}
+            </div>
+            <div style="clear:both;">&nbsp;</div>
+            <div class="col-md-6" style="margin-top:50px; margin-bottom:50px; margin-left:280px;">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        {% for gallery in occasions.gallery %}
+                        <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index0 }}"
+                            {% if loop.first %}class="active" {% endif %}></li>
+                        {% endfor %}
+                    </ol>
+                    <div class="carousel-inner">
+                        {% for gallery in occasions.gallery %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <img class="d-block w-100" src="http://placehold.it/540x540" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>{{  occasions.modele  }}</h5>
+                                <p>{{ gallery.caption }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+{% block javascripts %}{% endblock %}

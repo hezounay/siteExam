@@ -1,0 +1,498 @@
+@font-face {
+    font-family:'ferrari';
+    src:url("FerroRosso.ttf"); }
+    @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+* {
+
+margin:0;
+padding:0;
+
+}
+
+html,body {
+    height:100%;
+    overflow-x: hidden;
+}
+ .slidenew textarea { background-color: transparent;  color:white; border-bottom:1px solid white;}
+ .slidenew input:focus { background-color:transparent; color:white;}
+ .slidenew textarea:focus { background-color:transparent; color:white;}
+.slide1 {
+    background-image:url(/img/slide/carbon.jpg);
+    width:100%;
+    height:100%;
+    z-index:0;
+    position: fixed;
+
+}
+#globalbrand {
+    top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+    position: absolute;
+    width:100%;
+    height:100%;
+    animation:1.2s;
+    animation-delay:2.5s;
+    animation-fill-mode: forwards;
+    animation-name:globalbrand;
+
+}
+#brand {
+top:50%;
+left:50%;
+transform: translate(-50%,-50%);
+    position: absolute;
+    width: 250px;
+    height:0%;
+    animation:1.2s;
+    animation-delay:0.5s;
+    animation-fill-mode: forwards;
+    animation-name:brand;
+  
+background: #FF2800;
+}
+@keyframes brand {
+
+    0% {
+        height:0%;
+    }
+    100% {
+        height:100%;
+    }
+
+}
+@keyframes logo {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+
+}
+@keyframes text {
+
+    0% {
+        opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+
+}
+@keyframes texthome {
+
+    0% {
+        opacity: 0;
+        top:50%;
+    }
+  30% {
+    top:50%;
+  }
+    100% {
+       opacity: 1;
+       top:20%;
+
+    }
+
+}
+@keyframes globalbrand {
+
+    0% {
+        transform: translate(-50%,-50%);
+    }
+    100% {
+        transform: translate(-80%,-50%);
+    }
+
+}
+#logo img {
+    top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+position: absolute;
+width:150%; 
+opacity: 0;
+animation:0.7s;
+animation-delay:1.7s;
+animation-fill-mode: forwards;
+animation-name:logo;
+}
+.slideoccas img {
+    top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+position: absolute;
+width:150%; 
+opacity: 0;
+animation:0.7s;
+animation-delay:1.7s;
+animation-fill-mode: forwards;
+animation-name:logo;
+}
+#text {
+    font-family: 'ferrari';
+ width:100%;
+    font-size:150px;  
+      top:50%;
+    left:50%;
+    transform:translate(-20%,-50%);
+    position: absolute;
+    animation:1s;
+    opacity:0;
+    z-index:30;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:texthome;
+
+}
+#loremhome {
+
+    width:1000px;
+       font-size:25px;  
+         top:50%;
+       left:40%;
+       transform:translate(-20%,-50%);
+       position: absolute;
+       animation:1s;
+       opacity:0;
+       z-index:30;
+       color:white;
+       animation-delay:4.5s;
+       animation-fill-mode: forwards;
+       animation-name:text;
+   
+}
+.buy {
+    top:80%;
+    z-index:30;
+    animation-delay:4s;
+    font-family: 'ferrari';
+    animation-fill-mode: forwards;
+    animation-duration:1s;
+    animation-name:text;
+    border-radius:5%;
+    background-color:transparent;
+    font-size:80px;
+    color:
+    white;
+    opacity:0;
+    left:50%;
+    transform:translate(-22%,-50%);
+    position: absolute;
+    transition:0.5s;
+
+
+}
+
+.buy:hover{
+    background-color:transparent;
+    
+    text-decoration:none;
+    color:#ff2800;
+}
+
+a:hover {
+    text-decoration:none;
+}
+
+.cardbox { 
+    width:400px;
+    filter: grayscale(1);
+    float:left;
+    margin-top:37.5px;
+    margin-bottom:37.5px;
+    margin-left:50px;
+    margin-bottom:25px;
+    top:25%;
+    position:relative;
+    z-index:30;
+    height:300px;
+    animation:1s;
+    border:black solid 3px;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    transition:.5s;
+
+
+}
+.cardbox:hover {
+    filter: grayscale(0);
+    border:#FF2800  solid 3px;
+}
+
+.textoccas {
+    animation:1s;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    
+    font-size:50px;
+    font-family:'ferrari';
+    position: absolute;
+    top:15%;
+    z-index:30;
+    left:30%;
+}
+.modele {
+    width:100%;
+    text-align:center;
+    padding-top:25px;
+    box-sizing: border-box;
+    position:relative;
+    height:33px;
+    top:80%;
+    font-size:15px;
+}
+
+.couv {
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:400px;
+   
+
+  
+    height:300px;
+}
+
+.couv img {
+
+    background-size:cover;
+    align-items: center;
+    position:relative;
+    background-position:center center;
+    width:100%;
+    height:100%;
+    
+}
+
+.km {
+    font-size:25px;
+    top:85%;
+    left:26%;
+    transform: translate(-70%,-50%);
+    background-color:rgba(95, 95, 95, 0.6);
+    position: absolute;
+}
+.prix{
+    font-size:20px;
+    background-color:green;
+    color:white;
+    width:120px;
+    height:35px;
+    text-align:center;
+    top:10%;
+    left:78%;
+    transform: translate(-30%,-50%);
+    position: absolute;
+
+}
+.slideoccas{
+
+    width:80%;
+    left:26.3%;
+    min-height:100%;
+    margin-top:200px;
+    position: absolute;
+    top:0;
+}
+.slideshow{
+
+    width:73%;
+    left:27%;
+    min-height:100%;
+    margin-top:100px;
+    color:white;
+    animation:1s;
+    opacity:0;
+  
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    position: absolute;
+    top:0;
+}
+.slidenew{
+    animation:1s;
+    opacity:0;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    width:77%;
+    left:26.5%;
+    min-height:100%;
+    position: absolute;
+    top:0;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.4);
+}
+.textnew {
+    
+    animation:1s;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    
+    font-size:50px;
+    font-family:'ferrari';
+    position: absolute;
+    top:3%;
+    
+    z-index:30;
+   left:6%;
+}
+.textnew2 {
+    
+    animation:1s;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    
+    font-size:25px;
+    font-family:'ferrari';
+    position: absolute;
+    top:4%;
+    transition:.3s;
+    z-index:30;
+   left:80%;
+}
+.textnew2:hover {
+    color:#FF2800;
+}
+.textshow2 {
+    
+    animation:1s;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    
+    font-size:25px;
+    font-family:'ferrari';
+    position: absolute;
+    top:-3%;
+    transition:.3s;
+    z-index:30;
+   left:85%;
+}
+.textshow2:hover {
+    color:#FF2800;
+}
+.textshow1 {
+    
+    animation:1s;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    
+    font-size:25px;
+    font-family:'ferrari';
+    position: absolute;
+    top:-3%;
+    transition:.3s;
+    z-index:30;
+   left:10%;
+}
+.textshow1:hover {
+    color:#FF2800;
+}
+
+.slidenew form {
+    margin-top:150px;
+
+}
+.slidenew input, textarea{
+    
+    background-color:transparent;
+    color:white;
+    border:none;
+    font-size:20px;
+    border-bottom: 1px solid white;
+}
+.btn {
+    background-color:transparent;
+    color:white;
+    font-size:30px;
+    border: 2px solid white;
+    margin-top:25px;
+    margin-bottom:25px;
+    transition:.3s;
+    left:400px;
+    position:relative;
+
+}
+.btn:hover {
+    color:#FF2800;
+    border: 2px solid #ff2800;
+
+}
+#createad {
+
+    animation:1s;
+    opacity:0;
+    color:white;
+    animation-delay:3.5s;
+    animation-fill-mode: forwards;
+    animation-name:text;
+    transition:.3s;
+    font-size:35px;
+    font-family:'ferrari';
+    position: absolute;
+    top:15%;
+    z-index:30;
+    left:80%;
+
+}
+#createad:hover {
+    color:#FF2800;
+}
+.couv_show {
+
+    position: absolute;
+    width:60%;
+   top:0;
+   left:20%;
+
+  
+    height:500px;
+}
+.couv_show img {
+
+    background-size:cover;
+    align-items: center;
+    position:relative;
+    background-position:center center;
+    height: 200px;
+    width: 100%;
+    display: block;
+    
+}
+.box {
+    width:1000px;
+position:relative;
+  left:6.5%;
+  top:0;
+background-color:rgba(0, 0, 0, 0.4);
+    z-index:500;
+    height:600px;
+}
+
+

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+ {% block stylesheet %}  {% endblock %}
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+{% set url = path("occas_view") %}
+  
+<div id="text">DREAM IN <span style="color:#ff2800;">RED</span></div>
+<div id="loremhome"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis 
+voluptatem libero earum nihil! Accusantium et hic itaque suscipit aliquam aperiam voluptates! 
+Voluptatem omnis asperiores itaque voluptas sequi a corporis.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In debitis 
+voluptatem libero earum nihil! Accusantium et hic itaque suscipit aliquam aperiam voluptates! 
+Voluptatem omnis asperiores itaque voluptas sequi a corporis.</p></div>
+<a class="buy" href='{{ url }}'> ➠ SHOP</a>
+
+
+{% endblock %}
